@@ -5,6 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 return new class extends Migration
 {
     public function up(): void
@@ -13,7 +14,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->dateTime('end_at');
+            $table->dateTime('ends_at');
             $table->string('status')->default('open');
             $table->json('tech_stack');
             $table->foreignIdFor(User::class, 'created_by')->constrained('users');
